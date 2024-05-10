@@ -28,12 +28,12 @@
 				"header": [
 					{
 						"key": "client-id",
-						"value": "{{client-id}}",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
 						"type": "text"
 					},
 					{
 						"key": "client-secret",
-						"value": "{{client-secret}}",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
 						"type": "text"
 					},
 					{
