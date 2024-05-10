@@ -1,5 +1,5 @@
 ﻿api-key,transferId,tx_id,status,type,amount,
-"""""","""dbc977ef-1e72-41cd-ae87-fc8714be383b""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""",10,Validar campo Api-Key al enviarlo vacio
+,"""dbc977ef-1e72-41cd-ae87-fc8714be383b""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""",10,Validar campo Api-Key al enviarlo vacio
 757ff2d4-d02e-4395-9941-a962ab162e27,"""""","""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""",10,Validar campo tx Id*
 757ff2d4-d02e-4395-9941-a962ab162e27,null,"""BS9UFNPEG3BlTTirV""","""COMPLETED""","""REQUEST""",10,Validar campo tx Id*
 757ff2d4-d02e-4395-9941-a962ab162e27,"""03c2acf7-2eae-47c0-928f-67611d7dded4""","""""","""COMPLETED""","""REQUEST""",10,Validar campo status al enviarlo vacio
