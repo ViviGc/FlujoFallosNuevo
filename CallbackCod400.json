@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "c53826ac-af98-4b12-8384-eeaace8e9466",
+		"name": "Transfiya Copy 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31315694",
+		"_collection_link": "https://warped-rocket-761289.postman.co/workspace/TRANSFIYA-FLUJO-DE-FALLOS~5cddc94e-3038-425e-98aa-41519173c0b6/collection/31315694-c53826ac-af98-4b12-8384-eeaace8e9466?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "CALLBACK QA 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "{{client-id}}",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "{{client-secret}}",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":{{transferId}},\r\n    \"tx_id\": {{tx_id}},\r\n    \"status\": {{status}},\r\n    \"type\": {{type}},\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": {{amount}},\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
