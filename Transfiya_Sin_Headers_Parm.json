@@ -1,0 +1,910 @@
+{
+	"info": {
+		"_postman_id": "d5fa8bb2-28ff-4a9a-8c5a-9172611b8461",
+		"name": "Transfiya Copy 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31315694",
+		"_collection_link": "https://warped-rocket-761289.postman.co/workspace/TRANSFIYA-FLUJO-DE-FALLOS~5cddc94e-3038-425e-98aa-41519173c0b6/collection/31315694-d5fa8bb2-28ff-4a9a-8c5a-9172611b8461?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "CALLBACK QA Sin Amount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin transferId*",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin Api key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin Client Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin Client-Secret",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin message-uid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"// captura la variable code es igual a 400\r",
+							"const responseJson = pm.response.json();\r",
+							"const code = responseJson.errors[0].code;\r",
+							"const codenum = Number(code);\r",
+							"pm.environment.set(\"codenum\", codenum);\r",
+							" \r",
+							" // Verifica que el código de estado sea 400\r",
+							"pm.test(\"Código de estado es 1013 o 1018\", function() {\r",
+							"    pm.expect(codenum).to.be.oneOf([1013, 1018]);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin TX_ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"// captura la variable code es igual a 400\r",
+							"const responseJson = pm.response.json();\r",
+							"const code = responseJson.errors[0].code;\r",
+							"const codenum = Number(code);\r",
+							"pm.environment.set(\"codenum\", codenum);\r",
+							" \r",
+							" // Verifica que el código de estado sea 400\r",
+							"pm.test(\"Código de estado es 1013 o 1018\", function() {\r",
+							"    pm.expect(codenum).to.be.oneOf([1013, 1018]);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"// captura la variable code es igual a 400\r",
+							"const responseJson = pm.response.json();\r",
+							"const code = responseJson.errors[0].code;\r",
+							"const codenum = Number(code);\r",
+							"pm.environment.set(\"codenum\", codenum);\r",
+							" \r",
+							" // Verifica que el código de estado sea 400\r",
+							"pm.test(\"Código de estado es 1013 o 1018\", function() {\r",
+							"    pm.expect(codenum).to.be.oneOf([1013, 1018]);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\",\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin Error Code",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 0,\r\n    \"symbol\": \"$tin\",\r\n\r\n   \"errorDesc\": \"Prueba\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CALLBACK QA Sin Error Desc",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "65274d8ea32d7c1c3410a6b2792c277f",
+						"type": "text"
+					},
+					{
+						"key": "client-secret",
+						"value": "cbd2e69a83aa33abe80684a49260315a",
+						"type": "text"
+					},
+					{
+						"key": "message-uid",
+						"value": "54605465046",
+						"type": "text"
+					},
+					{
+						"key": "api-key",
+						"value": "757ff2d4-d02e-4395-9941-a962ab162e27",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": \"2023-12-20T05:58:55.475Z\",\r\n    \"updated\": \"2023-12-20T05:58:55.475Z\",\r\n    \"amount\": 10.00,\r\n    \"symbol\": \"$tin\",\r\n    \"errorCode\": \"1013\"\r\n\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://business.transfiya.com.co/ext/prb/ext/transfiya/v1/transfers/zPSaK3TzhqfPMitnm/callback",
+					"protocol": "https",
+					"host": [
+						"business",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"prb",
+						"ext",
+						"transfiya",
+						"v1",
+						"transfers",
+						"zPSaK3TzhqfPMitnm",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
