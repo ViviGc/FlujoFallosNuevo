@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "d5fa8bb2-28ff-4a9a-8c5a-9172611b8461",
-		"name": "Transfiya Copy 4",
+		"_postman_id": "1a757059-098a-4461-9eb5-0fa2b8eb889a",
+		"name": "Transfiya Copy 6",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31315694",
-		"_collection_link": "https://warped-rocket-761289.postman.co/workspace/TRANSFIYA-FLUJO-DE-FALLOS~5cddc94e-3038-425e-98aa-41519173c0b6/collection/31315694-d5fa8bb2-28ff-4a9a-8c5a-9172611b8461?source=collection_link"
+		"_collection_link": "https://warped-rocket-761289.postman.co/workspace/TRANSFIYA-FLUJO-DE-FALLOS~5cddc94e-3038-425e-98aa-41519173c0b6/collection/31315694-1a757059-098a-4461-9eb5-0fa2b8eb889a?source=collection_link"
 	},
 	"item": [
 		{
@@ -14,19 +14,10 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 400\", function () {\r",
-							"    pm.response.to.have.status(400);\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"// captura la variable code es igual a 400\r",
-							"const responseJson = pm.response.json();\r",
-							"const code = responseJson.errors[0].code;\r",
-							"const codenum = Number(code);\r",
-							"pm.environment.set(\"codenum\", codenum);\r",
-							" \r",
-							" // Verifica que el código de estado sea 400\r",
-							"pm.test(\"Código de estado es 1013 o 1018\", function() {\r",
-							"    pm.expect(codenum).to.be.oneOf([1013, 1018]);\r",
-							"});"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}

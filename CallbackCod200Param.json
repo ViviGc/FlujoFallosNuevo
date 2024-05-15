@@ -50,7 +50,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": {{created}},\r\n    \"updated\": {{updated}},\r\n    \"amount\": 10.00,\r\n    \"symbol\": {{symbol}},\r\n    \"errorCode\": {{errorCode}},\r\n   \"errorDesc\": {{errorDesc}}\r\n}   ",
+					"raw": "{\r\n    \"transferId\":\"dbc977ef-1e72-41cd-ae87-fc8714be383b\",\r\n    \"tx_id\": \"XzwutTb9BlZbefE2N\",\r\n    \"status\": \"COMPLETED\",\r\n    \"type\": \"REQUEST\",\r\n    \"created\": {{created}},\r\n    \"updated\": {{updated}},\r\n    \"amount\": {{amount}},\r\n    \"symbol\": {{symbol}},\r\n    \"errorCode\": {{errorCode}},\r\n   \"errorDesc\": {{errorDesc}}\r\n}   ",
 					"options": {
 						"raw": {
 							"language": "json"
